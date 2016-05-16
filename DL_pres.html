@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Deep Learning & ICLR</title>
+    
+    <meta name="description" content="">
+    <meta name="author" content="Travis Hoppe">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" 
+	  content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, 
+				   initial-scale=1.0, 
+				   maximum-scale=1.0, 
+				   user-scalable=no">
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.css">
+
+    <!-- Default themes -->
+    <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+    <!-- For LaTeX formating highlighting -->
+    <link rel="stylesheet" href="md2reveal/css/md2reveal_style.css">
+
+    <!--[if lt IE 9]>
+	<script src="reveal.js/lib/js/html5shiv.js"></script>
+	<![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal"><div class="slides">
+	<section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h1>Deep Learning</h1><a href="http://www.iclr.cc/doku.php">ICLR 2016</a> (International Conference on Learning Representations)</p>
+<hr>
+<p>
+Deep Learning: What's hot, what's hype and what can we use?</p>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h2>What is deep learning?</h2><em>and what is it not?</em></p>
+<br>
+<p>
+DL is a <em>subset</em> of machine learning.<br>DL is not a SVM, random forest, single layer HMM, ...<br>DL is defined by <strong>multiple stacks</strong> of layers (deep)</p>
+<figure>
+    <a href="images/DLex1.png">
+    <img class="transparent_image" src="images/DLex1.png" height="200px">
+    </a>
+    
+    </figure>
+<figure>
+    <a href="images/DLex2.png">
+    <img class="transparent_image" src="images/DLex2.png" height="200px">
+    </a>
+    
+    </figure>
+<figure>
+    <a href="images/DLex3.png">
+    <img class="transparent_image" src="images/DLex3.png" >
+    </a>
+    <figcaption><a href="http://arxiv.org/abs/1409.4842">inception model</a></figcaption>
+    </figure>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h2>Why so hot?</h2></p>
+<br>
+<p>
+DL is exploding in terms of publications and use-cases.</p>
+<br>
+<p>
+It works ... image recognition, captioning, robotic control, text synthesis, language generation, audio encoding,</p>
+<br>
+<p>
+<strong>Major</strong> investment by Google, Facebook, Twitter, IBM Watson, ...</p>
+</section><section   class="vertical-slide">
+<p>
+<h2>Why now?</h2></p>
+<br>
+<p>
+<h3>Datasets</h3></p>
+<br>
+<p>
+<h3>Hardware: GPU (nVidia)</h3></p>
+<figure>
+    <a href="images/nvidia-graphics-card-med.jpg">
+    <img class="transparent_image" src="images/nvidia-graphics-card-med.jpg" height="300px">
+    </a>
+    
+    </figure>
+</section><section   class="vertical-slide">
+<p>
+<h3>International Conference</h3><h3>on Learning Representations</h3></p>
+<br>
+<p>
+<h4>Yoshua Bengio</h4>U. Montreal, CS (22,000 citations)</p>
+<br>
+<p>
+<h4>Yann Lecun</h4>Facebook, AI Director (developed CovNets, major OCR work)</p>
+<br>
+<figure>
+    <a href="http://www.iro.umontreal.ca/~bengioy/yoshua_en/index_files/idlarge.jpg">
+    <img class="" src="http://www.iro.umontreal.ca/~bengioy/yoshua_en/index_files/idlarge.jpg" height="200px">
+    </a>
+    
+    </figure>
+<figure>
+    <a href="http://yann.lecun.com/ex/images/ylc-thumb.jpeg">
+    <img class="" src="http://yann.lecun.com/ex/images/ylc-thumb.jpeg" height="200px">
+    </a>
+    
+    </figure>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h2>Common patterns</h2>It's all about the architecture!</p>
+<br>
+<p>
+<h3><strong>MLP</strong>: Multilayer Perceptron</h3><h3><strong>RNN</strong>: Recurrent Neural Networks</h3><h3><strong>CNN</strong>: Convolutional Neural Network</h3><h3><strong>VAE</strong>: Varational AutoEncoders</h3><h3><strong>GAE</strong>: Generative Adversarial Networks</h3></p>
+</section><section   class="vertical-slide">
+<p>
+<h3><strong>MLP</strong>: Multilayer Perceptron</h3>Basic idea of most neural networks<br>Key points: Activation functions, Layers, Backpropagation,</p>
+<br>
+<figure>
+    <a href="https://camo.githubusercontent.com/6cbf32d6b071f11cda62a15c7697f1381bf03789/687474703a2f2f7777772e636f646570726f6a6563742e636f6d2f4b422f646f746e65742f707265646963746f722f6e6574776f726b2e6a7067">
+    <img class="" src="https://camo.githubusercontent.com/6cbf32d6b071f11cda62a15c7697f1381bf03789/687474703a2f2f7777772e636f646570726f6a6563742e636f6d2f4b422f646f746e65742f707265646963746f722f6e6574776f726b2e6a7067" >
+    </a>
+    
+    </figure>
+<br>
+<p>
+<h2>Activation: <svg class="latexSVG" height="100%" version="1.2" viewBox="0 0 46.31775 9.984375" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <g>
+   <symbol id="equation_FWWZI_4" overflow="visible">
+    <path d="M 3.65625 -3.984375 L 4.515625 -3.984375 C 4.71875 -3.984375 4.8125 -3.984375 4.8125 -4.1875 C 4.8125 -4.296875 4.71875 -4.296875 4.546875 -4.296875 L 3.71875 -4.296875 L 3.921875 -5.4375 C 3.96875 -5.640625 4.109375 -6.34375 4.171875 -6.46875 C 4.25 -6.65625 4.421875 -6.8125 4.640625 -6.8125 C 4.671875 -6.8125 4.9375 -6.8125 5.125 -6.625 C 4.6875 -6.59375 4.578125 -6.234375 4.578125 -6.09375 C 4.578125 -5.859375 4.765625 -5.734375 4.953125 -5.734375 C 5.21875 -5.734375 5.5 -5.96875 5.5 -6.34375 C 5.5 -6.796875 5.046875 -7.03125 4.640625 -7.03125 C 4.296875 -7.03125 3.671875 -6.84375 3.375 -5.859375 C 3.3125 -5.65625 3.28125 -5.546875 3.046875 -4.296875 L 2.359375 -4.296875 C 2.15625 -4.296875 2.046875 -4.296875 2.046875 -4.109375 C 2.046875 -3.984375 2.140625 -3.984375 2.328125 -3.984375 L 2.984375 -3.984375 L 2.25 -0.046875 C 2.0625 0.921875 1.890625 1.828125 1.375 1.828125 C 1.328125 1.828125 1.09375 1.828125 0.890625 1.640625 C 1.359375 1.609375 1.453125 1.25 1.453125 1.109375 C 1.453125 0.875 1.265625 0.75 1.078125 0.75 C 0.8125 0.75 0.53125 0.984375 0.53125 1.359375 C 0.53125 1.796875 0.96875 2.046875 1.375 2.046875 C 1.921875 2.046875 2.328125 1.453125 2.5 1.078125 C 2.828125 0.453125 3.046875 -0.75 3.0625 -0.828125 Z M 3.65625 -3.984375 " style="stroke:none;"/>
+   </symbol>
+   <symbol id="equation_FWWZI_6" overflow="visible">
+    <path d="M 3.328125 -3.015625 C 3.390625 -3.265625 3.625 -4.1875 4.3125 -4.1875 C 4.359375 -4.1875 4.609375 -4.1875 4.8125 -4.0625 C 4.53125 -4 4.34375 -3.765625 4.34375 -3.515625 C 4.34375 -3.359375 4.453125 -3.171875 4.71875 -3.171875 C 4.9375 -3.171875 5.25 -3.34375 5.25 -3.75 C 5.25 -4.265625 4.671875 -4.40625 4.328125 -4.40625 C 3.75 -4.40625 3.40625 -3.875 3.28125 -3.65625 C 3.03125 -4.3125 2.5 -4.40625 2.203125 -4.40625 C 1.171875 -4.40625 0.59375 -3.125 0.59375 -2.875 C 0.59375 -2.765625 0.703125 -2.765625 0.71875 -2.765625 C 0.796875 -2.765625 0.828125 -2.796875 0.84375 -2.875 C 1.1875 -3.9375 1.84375 -4.1875 2.1875 -4.1875 C 2.375 -4.1875 2.71875 -4.09375 2.71875 -3.515625 C 2.71875 -3.203125 2.546875 -2.546875 2.1875 -1.140625 C 2.03125 -0.53125 1.671875 -0.109375 1.234375 -0.109375 C 1.171875 -0.109375 0.953125 -0.109375 0.734375 -0.234375 C 0.984375 -0.296875 1.203125 -0.5 1.203125 -0.78125 C 1.203125 -1.046875 0.984375 -1.125 0.84375 -1.125 C 0.53125 -1.125 0.296875 -0.875 0.296875 -0.546875 C 0.296875 -0.09375 0.78125 0.109375 1.21875 0.109375 C 1.890625 0.109375 2.25 -0.59375 2.265625 -0.640625 C 2.390625 -0.28125 2.75 0.109375 3.34375 0.109375 C 4.375 0.109375 4.9375 -1.171875 4.9375 -1.421875 C 4.9375 -1.53125 4.859375 -1.53125 4.828125 -1.53125 C 4.734375 -1.53125 4.71875 -1.484375 4.6875 -1.421875 C 4.359375 -0.34375 3.6875 -0.109375 3.375 -0.109375 C 2.984375 -0.109375 2.828125 -0.421875 2.828125 -0.765625 C 2.828125 -0.984375 2.875 -1.203125 2.984375 -1.640625 Z M 3.328125 -3.015625 " style="stroke:none;"/>
+   </symbol>
+   <symbol id="equation_FWWZI_5" overflow="visible">
+    <path d="M 2.375 -6.8125 C 2.375 -6.8125 2.375 -6.921875 2.25 -6.921875 C 2.03125 -6.921875 1.296875 -6.84375 1.03125 -6.8125 C 0.953125 -6.8125 0.84375 -6.796875 0.84375 -6.625 C 0.84375 -6.5 0.9375 -6.5 1.09375 -6.5 C 1.5625 -6.5 1.578125 -6.4375 1.578125 -6.328125 C 1.578125 -6.265625 1.5 -5.921875 1.453125 -5.71875 L 0.625 -2.46875 C 0.515625 -1.96875 0.46875 -1.796875 0.46875 -1.453125 C 0.46875 -0.515625 1 0.109375 1.734375 0.109375 C 2.90625 0.109375 4.140625 -1.375 4.140625 -2.8125 C 4.140625 -3.71875 3.609375 -4.40625 2.8125 -4.40625 C 2.359375 -4.40625 1.9375 -4.109375 1.640625 -3.8125 Z M 1.453125 -3.046875 C 1.5 -3.265625 1.5 -3.28125 1.59375 -3.390625 C 2.078125 -4.03125 2.53125 -4.1875 2.796875 -4.1875 C 3.15625 -4.1875 3.421875 -3.890625 3.421875 -3.25 C 3.421875 -2.65625 3.09375 -1.515625 2.90625 -1.140625 C 2.578125 -0.46875 2.125 -0.109375 1.734375 -0.109375 C 1.390625 -0.109375 1.0625 -0.375 1.0625 -1.109375 C 1.0625 -1.3125 1.0625 -1.5 1.21875 -2.125 Z M 1.453125 -3.046875 " style="stroke:none;"/>
+   </symbol>
+   <symbol id="equation_FWWZI_0" overflow="visible">
+    <path d="M 3.296875 2.390625 C 3.296875 2.359375 3.296875 2.34375 3.125 2.171875 C 1.890625 0.921875 1.5625 -0.96875 1.5625 -2.5 C 1.5625 -4.234375 1.9375 -5.96875 3.171875 -7.203125 C 3.296875 -7.328125 3.296875 -7.34375 3.296875 -7.375 C 3.296875 -7.453125 3.265625 -7.484375 3.203125 -7.484375 C 3.09375 -7.484375 2.203125 -6.796875 1.609375 -5.53125 C 1.109375 -4.4375 0.984375 -3.328125 0.984375 -2.5 C 0.984375 -1.71875 1.09375 -0.515625 1.640625 0.625 C 2.25 1.84375 3.09375 2.5 3.203125 2.5 C 3.265625 2.5 3.296875 2.46875 3.296875 2.390625 Z M 3.296875 2.390625 " style="stroke:none;"/>
+   </symbol>
+   <symbol id="equation_FWWZI_1" overflow="visible">
+    <path d="M 4.078125 -2.296875 L 6.859375 -2.296875 C 7 -2.296875 7.1875 -2.296875 7.1875 -2.5 C 7.1875 -2.6875 7 -2.6875 6.859375 -2.6875 L 4.078125 -2.6875 L 4.078125 -5.484375 C 4.078125 -5.625 4.078125 -5.8125 3.875 -5.8125 C 3.671875 -5.8125 3.671875 -5.625 3.671875 -5.484375 L 3.671875 -2.6875 L 0.890625 -2.6875 C 0.75 -2.6875 0.5625 -2.6875 0.5625 -2.5 C 0.5625 -2.296875 0.75 -2.296875 0.890625 -2.296875 L 3.671875 -2.296875 L 3.671875 0.5 C 3.671875 0.640625 3.671875 0.828125 3.875 0.828125 C 4.078125 0.828125 4.078125 0.640625 4.078125 0.5 Z M 4.078125 -2.296875 " style="stroke:none;"/>
+   </symbol>
+   <symbol id="equation_FWWZI_2" overflow="visible">
+    <path d="M 2.875 -2.5 C 2.875 -3.265625 2.765625 -4.46875 2.21875 -5.609375 C 1.625 -6.828125 0.765625 -7.484375 0.671875 -7.484375 C 0.609375 -7.484375 0.5625 -7.4375 0.5625 -7.375 C 0.5625 -7.34375 0.5625 -7.328125 0.75 -7.140625 C 1.734375 -6.15625 2.296875 -4.578125 2.296875 -2.5 C 2.296875 -0.78125 1.9375 0.96875 0.703125 2.21875 C 0.5625 2.34375 0.5625 2.359375 0.5625 2.390625 C 0.5625 2.453125 0.609375 2.5 0.671875 2.5 C 0.765625 2.5 1.671875 1.8125 2.25 0.546875 C 2.765625 -0.546875 2.875 -1.65625 2.875 -2.5 Z M 2.875 -2.5 " style="stroke:none;"/>
+   </symbol>
+   <symbol id="equation_FWWZI_3" overflow="visible">
+    <path d="M 10.65625 -6.125 C 10.71875 -6.296875 10.71875 -6.3125 11.03125 -6.34375 C 11.234375 -6.375 11.4375 -6.375 11.609375 -6.375 L 11.609375 -6.84375 C 11.328125 -6.828125 10.984375 -6.8125 10.53125 -6.8125 C 10.15625 -6.8125 9.546875 -6.8125 9.1875 -6.84375 L 9.1875 -6.375 C 9.4375 -6.375 9.90625 -6.375 10.203125 -6.265625 L 8.484375 -1.796875 L 6.71875 -6.375 L 7.671875 -6.375 L 7.671875 -6.84375 C 7.296875 -6.8125 6.359375 -6.8125 5.9375 -6.8125 C 5.546875 -6.8125 4.75 -6.8125 4.40625 -6.84375 L 4.40625 -6.375 L 5.265625 -6.375 L 5.671875 -5.3125 L 4.3125 -1.796875 L 2.546875 -6.375 L 3.515625 -6.375 L 3.515625 -6.84375 C 3.125 -6.8125 2.1875 -6.8125 1.765625 -6.8125 C 1.375 -6.8125 0.59375 -6.8125 0.234375 -6.84375 L 0.234375 -6.375 L 1.09375 -6.375 L 3.484375 -0.171875 C 3.546875 -0.015625 3.59375 0.078125 3.84375 0.078125 C 4.09375 0.078125 4.125 -0.015625 4.1875 -0.171875 L 5.921875 -4.671875 L 7.65625 -0.171875 C 7.71875 -0.015625 7.75 0.078125 8 0.078125 C 8.25 0.078125 8.296875 -0.015625 8.359375 -0.171875 Z M 10.65625 -6.125 " style="stroke:none;"/>
+   </symbol>
+  </g>
+ </defs>
+ <g id="surface1">
+  <g>
+   <use x="-0.53125" xlink:href="#equation_FWWZI_4" y="7.484375"/>
+  </g>
+  <g>
+   <use x="5.41875" xlink:href="#equation_FWWZI_0" y="7.484375"/>
+  </g>
+  <g>
+   <use x="9.29275" xlink:href="#equation_FWWZI_3" y="7.484375"/>
+  </g>
+  <g>
+   <use x="21.29675" xlink:href="#equation_FWWZI_6" y="7.484375"/>
+  </g>
+  <g>
+   <use x="29.20375" xlink:href="#equation_FWWZI_1" y="7.484375"/>
+  </g>
+  <g>
+   <use x="39.16675" xlink:href="#equation_FWWZI_5" y="7.484375"/>
+  </g>
+  <g>
+   <use x="43.44275" xlink:href="#equation_FWWZI_2" y="7.484375"/>
+  </g>
+ </g>
+</svg></h2></p>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h3><strong>RNN</strong>: Recurrent Neural Networks</h3>Network maintains some sense of "state"</p>
+<br>
+<figure>
+    <a href="http://karpathy.github.io/assets/rnn/diags.jpeg">
+    <img class="" src="http://karpathy.github.io/assets/rnn/diags.jpeg" >
+    </a>
+    <figcaption><a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural Networks</a></figcaption>
+    </figure>
+</section><section   class="vertical-slide">
+<p>
+Trained on text, RNN's can reproduce passages, punctuation and style</p>
+<pre><code class=python>PANDARUS:
+Alas, I think he shall be come approached and the day
+When little srain would be attain'd into being never fed,
+And who is but a chain and subjects of his death,
+I should not sleep.
+    
+Second Senator:
+They are away this miseries, produced upon my soul,
+Breaking and strongly should be buried, when I perish
+The earth and thoughts of many states.</code></pre>
+<br>
+<p>
+Or titles of scientific articles (high-energy physics):</p>
+<pre><code class=python>Search for CP-Violation in Right-Handed Neutrinos
+Neutron Star Propagation as a Source of the Hadron-Hadron Scattering Measurement at the Planck Scale
+Goldstone bosons and scattering modes from two-dimensional Hamiltonians
+Baryogenesis with Yukawa Unified SUSY GUTs
+Radial scattering and dense quark matter and chiral phase transition of a pseudoscalar meson at finite baryon density
+Transition Form Factor Constant in a Quark-Diquark Model
+A New Theory of Supersymmetry Breaking
+Effective gluon propagator in QCD at zero and finite temperature and and dual gauge QCD in the BCS-BCS limit
+Light scalar pair signals in top quark multiple polarizatino</code></pre>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h3><strong>CNN</strong>: Convolutional Neural Network</h3>Sparse / shared weights weights</p>
+<figure>
+    <a href="images/conv_1D_nn.png">
+    <img class="transparent_image" src="images/conv_1D_nn.png" height="200px">
+    </a>
+    
+    </figure>
+<br>
+<figure>
+    <a href="images/mylenet.png">
+    <img class="transparent_image" src="images/mylenet.png" height="200px">
+    </a>
+    
+    </figure>
+</section><section   class="vertical-slide">
+<p>
+<h3><strong>CNN</strong> + <strong>RNN</strong>: Image captioning</h3></p>
+<figure>
+    <a href="images/CNNRNN.png">
+    <img class="" src="images/CNNRNN.png" >
+    </a>
+    
+    </figure>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h3><strong>Autoencoders</strong></h3>Train the network to reproduce the input</p>
+<figure>
+    <a href="images/autoencoder_network1.png">
+    <img class="" src="images/autoencoder_network1.png" >
+    </a>
+    
+    </figure>
+<br>
+<figure>
+    <a href="images/results-00.png">
+    <img class="" src="images/results-00.png" >
+    </a>
+    
+    </figure>
+<figure>
+    <a href="images/results-01.png">
+    <img class="" src="images/results-01.png" >
+    </a>
+    
+    </figure>
+<figure>
+    <a href="images/results-02.png">
+    <img class="" src="images/results-02.png" >
+    </a>
+    
+    </figure>
+<figure>
+    <a href="images/results-03.png">
+    <img class="" src="images/results-03.png" >
+    </a>
+    
+    </figure>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h3><strong>GAE</strong>: Generative Adversarial Networks</h3>Deep networks can be overtrained and brittle<br>Train <em>two</em> networks, one generates, the other discriminates</p>
+<br>
+<figure>
+    <a href="images/adves1.png">
+    <img class="" src="images/adves1.png" >
+    </a>
+    
+    </figure>
+</section><section   class="vertical-slide">
+<p>
+<h3><strong>GAE</strong>: Generative Adversarial Networks</h3></p>
+<figure>
+    <a href="images/adves2.png">
+    <img class="" src="images/adves2.png" >
+    </a>
+    
+    </figure>
+<br>
+<p>
+<div class="reference_footnote">Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks <a href="http://arxiv.org/abs/1511.06434">arxiv:1511.06434</a></div></p>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+Not covered here<h3>Deep Robotic Learning</h3></p>
+<figure>
+    <video autoplay loop height="600px">  
+    <source src="images/Sergey_Robots.mp4" type="video/mp4"> 
+    </video>
+    
+    </figure>
+<br>
+<p>
+<div class="reference_footnote">Sergey Levin, ICLR Keynote</div></p>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+More topics not covered<br><a href="http://arxiv.org/abs/1511.06909">BlackOut: Speeding up Recurrent Neural Network Language Models With Very Large Vocabularies</a></p>
+<br>
+<p>
+<a href="https://arxiv.org/abs/1506.08473">Guaranteed Non-convex Learning Algorithms through Tensor Factorization</a></p>
+<br>
+<p>
+<a href="http://arxiv.org/abs/1511.07543">Convergent Learning: Do different neural networks learn the same representations?</a></p>
+<br>
+<p>
+<a href="http://arxiv.org/abs/1511.05641">Net2Net: Accelerating Learning via Knowledge Transfer</a></p>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h2>The Goldilocks Principle</h2><a href="http://arxiv.org/abs/1511.02301">Reading Children's Books with Explicit Memory Representations</a></p>
+<br>
+<p>
+Built a corpus of children's books with attention based questions</p>
+<figure>
+    <a href="images/gold.png">
+    <img class="" src="images/gold.png" >
+    </a>
+    
+    </figure>
+<br>
+<p>
+Since humans need context to solve Q&A, train attention mechanisms!</p>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h3>Towards Universal Paraphrastic Sentence Embeddings <a href="http://arxiv.org/abs/1511.08198">arXiv</a></h3>Tested sentence similarity, entailment, and sentiment classification.<br>Word averaging works well but LSTM RNN's can be better representations.</p>
+<br>
+<p>
+An example of a positive TE (text entails hypothesis) is:</p>
+<pre><code class=python>text: If you help the needy, God will reward you.
+hypothesis: Giving money to a poor man has good consequences.</code></pre>
+<p>
+An example of a negative TE (text contradicts hypothesis) is:</p>
+<pre><code class=python>text: If you help the needy, God will reward you.
+hypothesis: Giving money to a poor man has no consequences.</code></pre>
+<p>
+An example of a non-TE (text does not entail nor contradict) is:</p>
+<pre><code class=python>text: If you help the needy, God will reward you.
+hypothesis: Giving money to a poor man will make you a better person.</code></pre>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h3>The Variational Fair Autoencoder <a href="http://arxiv.org/abs/1511.00830">arXiv</a></h3>"... learning representations that are invariant to certain nuisance or sensitive factors of variation in the data while retaining as much of the remaining information as possible. Our model is based on a variational autoencoding architecture with priors that encourage independence between sensitive and latent factors of variation."</p>
+<figure>
+    <a href="images/faces.png">
+    <img class="" src="images/faces.png" height="400px">
+    </a>
+    
+    </figure>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h3>Order-Embeddings of</h3><h3>Images and Language <a href="http://arxiv.org/abs/1511.06361">arXiv</a></h3>" Hypernymy, textual entailment, and image captioning can be seen as special cases of a single visual-semantic hierarchy over words, sentences, and images. In this paper we advocate for explicitly modeling the partial order structure of this hierarchy..."</p>
+<br>
+<figure>
+    <a href="images/orderembed1.png">
+    <img class="" src="images/orderembed1.png" height="400px">
+    </a>
+    
+    </figure>
+<figure>
+    <a href="images/orderembed2.png">
+    <img class="" src="images/orderembed2.png" height="400px">
+    </a>
+    
+    </figure>
+</section>
+</section>
+    </div></div>
+
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.js"></script>
+
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      overview: true, height: 900, keyboard: {37: 'prev', 39: 'next'}, touch: true, hideAddressBar: true, rollingLinks: false, mouseWheel: true, controls: false, width: 1200, viewDistance: 3, rtl: false, progress: true, fragments: true, autoSlide: 0, autoSlideStoppable: true, backgroundtransition: "default", transitionSpeed: "default", slideNumber: true, center: true, embedded: true, transition: "default", maxScale: 1.2, minScale: 0.2, previewLinks: false, margin: 0.05, loop: false, history: true, 
+      
+      theme: Reveal.getQueryHash().theme, 
+      // available themes are in reveal.js/css/theme
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [ { src: 'reveal.js/lib/js/classList.js', condition: function() { 
+    return !document.body.classList; } },
+
+{ src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { 
+    return !!document.querySelector( '[data-markdown]' ); } },
+
+{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { 
+    return !!document.querySelector( '[data-markdown]' ); } },
+
+{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: 
+  function() { hljs.initHighlightingOnLoad(); } },
+
+{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: 
+  function() { return !!document.body.classList; } },
+ ]
+
+      });
+    </script>
+
+  </body>
+</html>
