@@ -1,0 +1,125 @@
+/*********************************************
+  Image styles
+  Markdown example: !(foo.png)
+*********************************************/
+.reveal figure {
+    max-height: 75%;
+    vertical-align:bottom;
+}
+
+.reveal section img{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.reveal section video{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.reveal .inline_image {
+    display: inline;
+}
+
+.reveal .transparent_image  {
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+/*********************************************
+  LaTeX equations
+  Markdown example: $x^2 = y + 2$
+*********************************************/
+.reveal svg.latexSVG {
+    margin:0px;
+    background-color:transparent; 
+    vertical-align: baseline;
+    border:none;
+    box-shadow:none;
+    height:0.8em;
+    margin-right:.1em;
+    margin-left :.1em;
+    max-width: 100%;
+    fill: currentColor;
+    stroke: currentColor;
+    overflow:hidden;
+}
+
+.reveal h1 svg.latexSVG,
+.reveal h2 svg.latexSVG,
+.reveal h3 svg.latexSVG,
+.reveal h4 svg.latexSVG,
+.reveal h5 svg.latexSVG,
+.reveal h6 svg.latexSVG
+{
+    padding:0;
+    margin:0;
+    vertical-align:middle;
+    height:1.25em;
+}
+
+/*********************************************
+  Footnotes [Markdown: &&]
+  Markdown example: && Reference note
+*********************************************/
+
+.reveal .reference_footnote {
+    float:left;
+    border:0; padding:0; margin:0;
+    position:fixed;
+    bottom:0%; right:0%;
+    font-size:60%;
+    text-align: right;
+    line-height:110%;  /* slightly compressed */
+}
+
+.reveal figure {
+    max-height: 75%;
+    display:inline-block;
+    vertical-align: bottom;
+}
+
+.reveal figcaption {
+    margin:0;
+    font-size:60%;
+}
+
+/*********************************************
+  Personal style overrides
+*********************************************/
+
+.reveal li {
+    list-style-type: none;
+}
+
+.reveal .footnote {
+    font-size:80%;
+    line-height:1.25;
+    margin: 0;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.reveal strong {
+    color:  #FA5858;
+}
+
+/*********************************************
+  Special slide transitions
+********************************************/
+.reveal .no_slide_transition {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important;
+    
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
